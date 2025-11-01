@@ -1,10 +1,6 @@
-![Banner](./banner.svg)
+
 
 <h1 align="center">Hi, I'm <span style="color:#8b5cf6;">Zaky Aryasatya</span> 👋</h1>
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&width=520&lines=Frontend+Developer;Creative+UI%2FUX+Enthusiast;Patience+is+my+superpower+💫" alt="Typing SVG" />
-</p>
-
 ---
 
 ### 🎯 About Me
