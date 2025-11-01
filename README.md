@@ -1,4 +1,4 @@
-![Banner](./banner-frontend.svg)
+![Banner](./banner.svg)
 
 <h1 align="center">Hi, I'm <span style="color:#8b5cf6;">Zaky Aryasatya</span> 👋</h1>
 <p align="center">
