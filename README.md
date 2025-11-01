@@ -1,16 +1,30 @@
-## Hi there 👋
+![Zaky Aryasatya Banner](./banner.svg)
 
-<!--
-**ZacksAryasatya/ZacksAryasatya** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hi, I'm Zaky Aryasatya 👋
 
-Here are some ideas to get you started:
+💭 *"Patience."*  
+I believe growth takes time — and consistency builds greatness.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### 🧠 About Me
+- 🎓 SMK RPL student passionate about **backend** & **network systems**
+- 🚀 Currently exploring **Node.js**, **MongoDB**, and **DevOps**
+- 🌌 Interested in **VSAT technology** and high-impact tech projects
+- 💬 Always learning, always patient.
+
+---
+
+### ⚙️ Tech Stack
+![JavaScript](https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node-dot-js)
+![Java](https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git)
+
+---
+
+### 📊 GitHub Stats
+![Zaky's GitHub stats](https://github-readme-stats.vercel.app/api?username=zakyaryasatya&show_icons=true&theme=tokyonight)
+
+---
+🖤 *"Be patient. Empires aren’t built overnight."*
