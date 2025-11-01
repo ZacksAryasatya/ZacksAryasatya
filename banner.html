@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+  @keyframes fall {
+    0% { transform: translateY(0) translateX(0); opacity: 1; }
+    100% { transform: translateY(300px) translateX(-200px); opacity: 0; }
+  }
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.3; }
+  }
+  body {
+    margin: 0;
+    width: 1200px;
+    height: 300px;
+    background: radial-gradient(circle at top right, #ec4899, #6366f1, #0b122e);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h1 {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 0 0 10px #fff, 0 0 25px #a855f7;
+  }
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 2s infinite;
+  }
+  .shooting {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: fall 2.5s linear infinite;
+  }
+</style>
+</head>
+<body>
+  <h1>Zaky Aryasatya Adinata</h1>
+
+  <script>
+    // static stars
+    for (let i = 0; i < 60; i++) {
+      const s = document.createElement("div");
+      s.classList.add("star");
+      s.style.left = Math.random() * 1200 + "px";
+      s.style.top = Math.random() * 300 + "px";
+      s.style.animationDuration = 1.5 + Math.random() * 2 + "s";
+      document.body.appendChild(s);
+    }
+
+    // shooting stars
+    function shooting() {
+      const s = document.createElement("div");
+      s.classList.add("shooting");
+      s.style.left = Math.random() * 1200 + "px";
+      s.style.top = Math.random() * 100 + "px";
+      s.style.animationDuration = 1.5 + Math.random() * 1 + "s";
+      document.body.appendChild(s);
+      setTimeout(() => s.remove(), 2500);
+    }
+    setInterval(shooting, 2000);
+  </script>
+</body>
+</html>
