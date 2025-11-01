@@ -24,7 +24,7 @@ I believe growth takes time — and consistency builds greatness.
 ---
 
 ### 📊 GitHub Stats
-![Zaky's GitHub stats](https://github-readme-stats.vercel.app/api?username=zakyaryasatya&show_icons=true&theme=tokyonight)
+![Zaky's GitHub stats](https://github-readme-stats.vercel.app/api?username=ZacksAryasatya&show_icons=true&theme=tokyonight)
 
 ---
 🖤 *"Be patient. Empires aren’t built overnight."*
