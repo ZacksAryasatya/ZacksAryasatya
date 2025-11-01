@@ -1,40 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="260" viewBox="0 0 1000 260" role="img" aria-labelledby="title desc">
+  <title id="title">Zaky Aryasatya - Frontend Developer Banner</title>
+  <desc id="desc">Dark futuristic gradient banner with animated gradient text and light sweep effect.</desc>
+
   <defs>
-    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#0f172a"/>
-      <stop offset="1" stop-color="#1e293b"/>
+    <!-- background gradient -->
+    <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#071026"/>
+      <stop offset="1" stop-color="#0b1220"/>
     </linearGradient>
-    <linearGradient id="txt" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="1" stop-color="#8b5cf6"/>
+
+    <!-- moving text gradient -->
+    <linearGradient id="movingGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="35%" stop-color="#7c3aed"/>
+      <stop offset="70%" stop-color="#ff6ba7"/>
+      <stop offset="100%" stop-color="#ffb86b"/>
+      <!-- animate the gradient's stops to create movement -->
+      <animate attributeName="x1" values="0;1;0" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;0;1" dur="8s" repeatCount="indefinite"/>
     </linearGradient>
+
+    <!-- subtle glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- mask for light sweep -->
+    <linearGradient id="sweepGrad" x1="0" x2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+
+    <mask id="sweepMask">
+      <rect x="0" y="0" width="100%" height="100%" fill="black"/>
+      <rect id="sweepRect" x="-300" y="0" width="300" height="260" fill="url(#sweepGrad)" />
+      <animate xlink:href="#sweepRect" attributeName="x" from="-300" to="1200" dur="4.6s" begin="0.6s" repeatCount="indefinite"/>
+    </mask>
   </defs>
 
-  <!-- Background -->
-  <rect width="100%" height="100%" rx="24" fill="url(#bg)"/>
+  <!-- background -->
+  <rect width="100%" height="100%" rx="20" fill="url(#bgGrad)"/>
 
-  <!-- Animated gradient orb -->
-  <circle cx="850" cy="90" r="60" fill="url(#txt)" opacity="0.15">
-    <animate attributeName="r" values="55;65;55" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.1;0.25;0.1" dur="4s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Text -->
-  <g transform="translate(80,110)">
-    <text font-family="Segoe UI, Inter, sans-serif" font-size="42" font-weight="700" fill="url(#txt)">
-      Zaky Aryasatya
-    </text>
-    <text y="45" font-family="Inter, sans-serif" font-size="20" fill="#94a3b8">
-      patience
-    </text>
+  <!-- abstract decorative shapes -->
+  <g opacity="0.08" filter="url(#glow)">
+    <circle cx="150" cy="60" r="80" fill="#38bdf8"/>
+    <circle cx="860" cy="80" r="60" fill="#ff6ba7"/>
   </g>
 
-  <!-- Subtle line -->
-  <line x1="80" y1="170" x2="920" y2="170" stroke="url(#txt)" stroke-width="1" opacity="0.2"/>
+  <!-- main text group -->
+  <g transform="translate(72,96)">
+    <!-- name with animated gradient fill -->
+    <text x="0" y="18" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" font-size="44" font-weight="800" fill="url(#movingGrad)">
+      Zaky Aryasatya
+    </text>
 
-  <!-- Animated particle -->
-  <circle cx="120" cy="200" r="4" fill="#38bdf8">
-    <animate attributeName="cx" values="120;880;120" dur="8s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="1;0.2;1" dur="8s" repeatCount="indefinite"/>
+    <!-- subtitle / role -->
+    <text x="0" y="58" font-family="Inter, system-ui, -apple-system, 'Segoe UI', Roboto" font-size="18" fill="#94a3b8" letter-spacing="0.2">
+      Frontend Developer • Creative UI / UX • Patience
+    </text>
+
+    <!-- small badges (simple SVG icons) -->
+    <g transform="translate(0,86)" opacity="0.95">
+      <!-- HTML icon -->
+      <rect x="0" y="0" width="96" height="34" rx="6" fill="#0b1220" stroke="#172033" stroke-width="1"/>
+      <text x="12" y="22" font-family="Inter, sans-serif" font-size="14" fill="#ff6b6b" font-weight="700">&lt;HTML&gt;</text>
+
+      <!-- React icon -->
+      <g transform="translate(110,0)">
+        <rect x="0" y="0" width="120" height="34" rx="6" fill="#0b1220" stroke="#172033" stroke-width="1"/>
+        <text x="12" y="22" font-family="Inter, sans-serif" font-size="14" fill="#61dafb" font-weight="700">React • Tailwind</text>
+      </g>
+
+      <!-- CSS/JS icon -->
+      <g transform="translate(250,0)">
+        <rect x="0" y="0" width="120" height="34" rx="6" fill="#0b1220" stroke="#172033" stroke-width="1"/>
+        <text x="12" y="22" font-family="Inter, sans-serif" font-size="14" fill="#f7df1e" font-weight="700">JavaScript • CSS</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- light sweep overlay (mask used so it only brightens, not hide) -->
+  <rect x="0" y="0" width="100%" height="100%" fill="white" opacity="0.02" mask="url(#sweepMask)"/>
+
+  <!-- subtle moving dots / particle for dynamism -->
+  <circle cx="120" cy="210" r="3" fill="#38bdf8" opacity="0.9">
+    <animate attributeName="cx" values="120;300;120" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.9;0.25;0.9" dur="6s" repeatCount="indefinite"/>
   </circle>
+
+  <circle cx="320" cy="220" r="2.5" fill="#ff6ba7" opacity="0.8">
+    <animate attributeName="cx" values="320;760;320" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.2;0.8" dur="10s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- footer thin line -->
+  <line x1="72" y1="240" x2="928" y2="240" stroke="#172033" stroke-width="1" opacity="0.6"/>
 </svg>
